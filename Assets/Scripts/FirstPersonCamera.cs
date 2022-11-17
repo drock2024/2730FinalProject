@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FirstPersonCamera : MonoBehaviour
 {
-    [Header("Framing")] public Camera camera;
+    [Header("Framing")] public Camera cam;
 
     [Header("Rotation")] 
     [Range(-90f, 90f)]

@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour, ICharacterController
     [Header("Collisions")] 
     public List<Collider> ignoredColliders = new List<Collider>();
 
+    public static Action OnRequestTimeSwap;
+
     private const string MouseXInput = "Mouse X";
     private const string MouseYInput = "Mouse Y";
     private const string MouseScrollInput = "Mouse ScrollWheel";
@@ -30,6 +32,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
     private bool _journalDown;
     private bool _timeSwapDown;
     private Vector3 _gravity = new Vector3(0, -30f, 0);
+    
 
     private void Awake()
     {
@@ -75,6 +78,11 @@ public class PlayerController : MonoBehaviour, ICharacterController
         _interactDown = Input.GetKeyDown(KeyCode.E);
         _journalDown = Input.GetKeyDown(KeyCode.J);
         _timeSwapDown = Input.GetKeyDown(KeyCode.Q);
+
+        if (_timeSwapDown)
+        {
+            OnRequestTimeSwap?.Invoke();
+        }
     }
     
     private void HandleCameraInput()
