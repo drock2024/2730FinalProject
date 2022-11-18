@@ -30,6 +30,8 @@ public class ClueInteraction : MonoBehaviour
                 textBox.GetComponent<TextMeshProUGUI>().text = "";
                 journal.GetComponent<Image>().enabled = true;
             }
+        } else {
+            textBox.GetComponent<TextMeshProUGUI>().text = "";
         }
     }
 }
