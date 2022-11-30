@@ -22,14 +22,14 @@ public class JournalManager : MonoBehaviour
         if (Input.GetKeyDown("r")) {
             journalList[page].enabled = !journalList[page].enabled;
         }
-        if (Input.GetKeyDown("right")) {
+        if (Input.GetKeyDown("m")) {
             if (page < journalList.Count - 1) {
                 journalList[page].enabled = false;
                 page++;
                 journalList[page].enabled = true;
             }
         }
-        if (Input.GetKeyDown("left")) {
+        if (Input.GetKeyDown("n")) {
             if (page > 0) {
                 journalList[page].enabled = false;
                 page--;
