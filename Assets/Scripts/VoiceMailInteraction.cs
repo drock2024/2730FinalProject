@@ -14,7 +14,7 @@ public class VoiceMailInteraction : MonoBehaviour
 
     //Define variables
     float distance = 0;
-    bool active = false;
+    bool activated = false;
     
 
     // Update is called once per frame
@@ -23,8 +23,9 @@ public class VoiceMailInteraction : MonoBehaviour
         distance = Vector3.Distance(transform.position, player.transform.position);
         if (distance < 5) {
                 textBox.GetComponent<TextMeshProUGUI>().text = "*Press e to inspect*";
-            if (Input.GetKeyDown("e")) {
+            if (Input.GetKeyDown("e") && !activated) {
                 manager.GetComponent<JournalManager>().journalList.Add(journal.GetComponent<Image>());
+                activated = true;
             }
         } else {
             textBox.GetComponent<TextMeshProUGUI>().text = "";
