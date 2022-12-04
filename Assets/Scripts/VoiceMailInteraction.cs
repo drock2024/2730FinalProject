@@ -21,7 +21,7 @@ public class VoiceMailInteraction : MonoBehaviour
     void Update()
     {
         distance = Vector3.Distance(transform.position, player.transform.position);
-        if (distance < 5) {
+        if (distance < 3) {
                 textBox.GetComponent<TextMeshProUGUI>().text = "*Press e to inspect*";
             if (Input.GetKeyDown("e") && !activated) {
                 manager.GetComponent<JournalManager>().journalList.Add(journal.GetComponent<Image>());
