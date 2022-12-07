@@ -8,6 +8,7 @@ public class VoiceMailInteraction : MonoBehaviour
 {
     //Define text and interactors
     public GameObject textBox;
+    public TextMeshProUGUI textMessage;
     public GameObject player;
     public GameObject journal;
     public GameObject manager;
@@ -26,9 +27,17 @@ public class VoiceMailInteraction : MonoBehaviour
             if (Input.GetKeyDown("e") && !activated) {
                 manager.GetComponent<JournalManager>().journalList.Add(journal.GetComponent<Image>());
                 activated = true;
+                StartCoroutine(ShowMessage("Notes added", 2));
             }
         } else {
             textBox.GetComponent<TextMeshProUGUI>().text = "";
         }
+    }
+
+    IEnumerator ShowMessage (string message, float delay) {
+        textMessage.text = message;
+        textMessage.enabled = true;
+        yield return new WaitForSeconds(delay);
+        textMessage.enabled = false;
     }
 }

@@ -8,6 +8,7 @@ public class ClueInteraction : MonoBehaviour
 {
     //Define text and interactors
     public GameObject textBox;
+    public TextMeshProUGUI textMessage;
     public GameObject player;
     public GameObject journal;
     public GameObject manager;
@@ -24,10 +25,18 @@ public class ClueInteraction : MonoBehaviour
                 textBox.GetComponent<TextMeshProUGUI>().text = "*Press e to inspect*";
             if (Input.GetKeyDown("e") && !activated) {
                 manager.GetComponent<JournalManager>().journalList.Add(journal.GetComponent<Image>());
+                StartCoroutine(ShowMessage("Notes added", 2));
                 activated = true;
             }
         } else {
             textBox.GetComponent<TextMeshProUGUI>().text = "";
         }
+    }
+    
+    IEnumerator ShowMessage (string message, float delay) {
+        textMessage.text = message;
+        textMessage.enabled = true;
+        yield return new WaitForSeconds(delay);
+        textMessage.enabled = false;
     }
 }
