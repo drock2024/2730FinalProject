@@ -27,6 +27,7 @@ public class ClueInteraction : MonoBehaviour
                 manager.GetComponent<JournalManager>().journalList.Add(journal.GetComponent<Image>());
                 StartCoroutine(ShowMessage("Notes added", 2));
                 activated = true;
+                JournalManager.momFound = true;
             }
         } else {
             textBox.GetComponent<TextMeshProUGUI>().text = "";

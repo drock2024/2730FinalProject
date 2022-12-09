@@ -28,6 +28,7 @@ public class MagnifyingInteraction : MonoBehaviour
                 manager.GetComponent<JournalManager>().journalList.Add(journal.GetComponent<Image>());
                 activated = true;
                 StartCoroutine(ShowMessage("Notes added", 2));
+                JournalManager.daughterFound = true;
             }
         } else {
             textBox.GetComponent<TextMeshProUGUI>().text = "";

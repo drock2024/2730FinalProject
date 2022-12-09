@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using KinematicCharacterController;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(KinematicCharacterMotor))]
 public class PlayerController : MonoBehaviour, ICharacterController

@@ -28,6 +28,7 @@ public class VoiceMailInteraction : MonoBehaviour
                 manager.GetComponent<JournalManager>().journalList.Add(journal.GetComponent<Image>());
                 activated = true;
                 StartCoroutine(ShowMessage("Notes added", 2));
+                JournalManager.momFound = true;
             }
         } else {
             textBox.GetComponent<TextMeshProUGUI>().text = "";
