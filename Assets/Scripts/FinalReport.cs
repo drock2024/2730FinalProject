@@ -9,6 +9,8 @@ public class FinalReport : MonoBehaviour
 {
     //Define dropdowns
     public TMP_Dropdown culpritBox;
+    public TMP_Dropdown causeBox;
+    public TMP_Dropdown moneyBox;
 
     void Start()
     {
