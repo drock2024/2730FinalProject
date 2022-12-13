@@ -16,4 +16,8 @@ public class MainMenu : MonoBehaviour
     public void ContinueGame() {
         SceneManager.LoadScene("Scenes/SampleScene");
     }
+
+    public void SubmitReport() {
+        SceneManager.LoadScene("Scenes/FinalReport");
+    }
 }
