@@ -11,11 +11,17 @@ public class VoiceMailInteraction : MonoBehaviour
     public TextMeshProUGUI textMessage;
     public GameObject player;
     public GameObject journal;
+    public GameObject journal2;
     public GameObject manager;
 
     //Define variables
     float distance = 0;
-    bool activated = false;
+    int activated = 0;
+    int messageCount = 0;
+
+    //Define Audio Clips
+    public AudioClip finance;
+    public AudioClip principal;
     
 
     // Update is called once per frame
@@ -24,11 +30,22 @@ public class VoiceMailInteraction : MonoBehaviour
         distance = Vector3.Distance(transform.position, player.transform.position);
         if (distance < 3) {
                 textBox.GetComponent<TextMeshProUGUI>().text = "*Press e to inspect*";
-            if (Input.GetKeyDown("e") && !activated) {
+            if (Input.GetKeyDown("e") && activated == 0) {
                 manager.GetComponent<JournalManager>().journalList.Add(journal.GetComponent<Image>());
-                activated = true;
+                activated = 1;
+                PlayMessage();
+                JournalManager manageScript = manager.GetComponent<JournalManager>();
+                manageScript.ScribbleNotes();
                 StartCoroutine(ShowMessage("Notes added", 2));
                 JournalManager.momFound = true;
+            } else if (Input.GetKeyDown("e") && activated == 1) {
+                manager.GetComponent<JournalManager>().journalList.Add(journal2.GetComponent<Image>());
+                activated = 2;
+                PlayMessage();
+                JournalManager manageScript = manager.GetComponent<JournalManager>();
+                manageScript.ScribbleNotes();
+                StartCoroutine(ShowMessage("Notes added", 2));
+                JournalManager.sonFound = true;
             }
         } else {
             textBox.GetComponent<TextMeshProUGUI>().text = "";
@@ -40,5 +57,20 @@ public class VoiceMailInteraction : MonoBehaviour
         textMessage.enabled = true;
         yield return new WaitForSeconds(delay);
         textMessage.enabled = false;
+    }
+
+    void PlayMessage() {
+        if (messageCount == 0) {
+            AudioSource audioPlayer = GetComponent<AudioSource>();
+            audioPlayer.clip = finance;
+            audioPlayer.Play();
+            messageCount = 1;
+        } else if (messageCount == 1) {
+            AudioSource audioPlayer = GetComponent<AudioSource>();
+            audioPlayer.clip = principal;
+            audioPlayer.Play();
+            messageCount = 1;
+        }
+        
     }
 }

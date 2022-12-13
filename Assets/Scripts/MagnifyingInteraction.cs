@@ -27,6 +27,8 @@ public class MagnifyingInteraction : MonoBehaviour
             if (Input.GetKeyDown("e") && !activated) {
                 manager.GetComponent<JournalManager>().journalList.Add(journal.GetComponent<Image>());
                 activated = true;
+                JournalManager manageScript = manager.GetComponent<JournalManager>();
+                manageScript.ScribbleNotes();
                 StartCoroutine(ShowMessage("Notes added", 2));
                 JournalManager.daughterFound = true;
             }
