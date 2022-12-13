@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 11513
+  controlID: 12894
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 11514
+  controlID: 12855
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 11476
+  controlID: 12856
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 361
     height: 561
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -223,24 +223,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 9}
+      scrollPos: {x: 0, y: 25}
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 38fbfffffe5a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: VoiceMailLight
+        m_OriginalName: VoiceMailLight
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 23242
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -535,9 +535,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -11.918766, y: 101.22649, z: -24.110807}
+    m_Target: {x: 5.1476126, y: 1.7400572, z: -3.1300032}
     speed: 2
-    m_Value: {x: -11.918766, y: 101.22649, z: -24.110807}
+    m_Value: {x: 5.1476126, y: 1.7400572, z: -3.1300032}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -584,13 +584,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.009309049, y: 0.95270646, z: -0.02809079, w: -0.3027927}
+    m_Target: {x: 0.074678056, y: 0.8571252, z: -0.13070479, w: 0.49283522}
     speed: 2
-    m_Value: {x: -0.009308077, y: 0.9526071, z: -0.02808786, w: -0.3027611}
+    m_Value: {x: 0.07467019, y: 0.8570349, z: -0.13069102, w: 0.4927833}
   m_Size:
-    m_Target: 7.240131
+    m_Target: 1.2124355
     speed: 2
-    m_Value: 7.240131
+    m_Value: 1.2124355
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -634,8 +634,8 @@ MonoBehaviour:
     y: 561
     width: 1467
     height: 386
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 10}
@@ -683,21 +683,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Models/Props
+    - Assets/Models/house
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 71
   m_LastFolders:
-  - Assets/Models/Props
+  - Assets/Models/house
   m_LastFoldersGridSize: 71
   m_LastProjectPath: D:\Game Projects\Unity\2730FinalProject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 026f0000
-    m_LastClickedID: 28418
+    m_SelectedIDs: 006f0000
+    m_LastClickedID: 28416
     m_ExpandedIDs: 00000000e86e0000ea6e0000ec6e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -751,8 +751,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 425a0000
-    m_LastClickedInstanceID: 23106
+    m_SelectedInstanceIDs: ca5a0000
+    m_LastClickedInstanceID: 23242
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000d65d0000785f000000000000
     m_RenameOverlay:
@@ -829,8 +829,8 @@ MonoBehaviour:
     y: 0
     width: 453
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -871,7 +871,7 @@ MonoBehaviour:
     m_CachedPref: 151
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 23106
+  m_LastInspectedObjectInstanceID: 23242
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
