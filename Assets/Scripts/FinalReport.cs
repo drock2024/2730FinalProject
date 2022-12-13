@@ -24,12 +24,12 @@ public class FinalReport : MonoBehaviour
         }
 
         if (JournalManager.daughterFound) {
-            List<string> daughter = new List<string> {"Plotwell daughter"};
+            List<string> daughter = new List<string> {"Sadie Plotwell"};
             culpritBox.AddOptions(daughter);
         }
 
         if (JournalManager.sonFound) {
-            List<string> son = new List<string> {"Plotwell son"};
+            List<string> son = new List<string> {"Jason Plotwell"};
             culpritBox.AddOptions(son);
         }
     }
