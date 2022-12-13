@@ -15,6 +15,9 @@ public class JournalManager : MonoBehaviour
     public static bool sonFound = false;
     public static bool daughterFound = false;
     public static bool natureFound = false;
+    //Audio
+    public AudioClip scribble;
+    public AudioClip pageTurn;
 
     // Start is called before the first frame update
     void Start() {
@@ -33,6 +36,9 @@ public class JournalManager : MonoBehaviour
                 journalList[page].enabled = false;
                 page++;
                 journalList[page].enabled = true;
+                AudioSource audioPlayer = GetComponent<AudioSource>();
+                audioPlayer.clip = pageTurn;
+                audioPlayer.Play();
             }
         }
         if (Input.GetKeyDown("n")) {
@@ -40,11 +46,20 @@ public class JournalManager : MonoBehaviour
                 journalList[page].enabled = false;
                 page--;
                 journalList[page].enabled = true;
+                AudioSource audioPlayer = GetComponent<AudioSource>();
+                audioPlayer.clip = pageTurn;
+                audioPlayer.Play();
             }
         }
 
         if (Input.GetKeyDown("p")) {
             SceneManager.LoadScene("FinalReport");
         }
+    }
+
+    public void ScribbleNotes() {
+        AudioSource audioPlayer = GetComponent<AudioSource>();
+        audioPlayer.clip = scribble;
+        audioPlayer.Play();
     }
 }
