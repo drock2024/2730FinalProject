@@ -1,0 +1,1 @@
+Folder storing sounds used in game.
