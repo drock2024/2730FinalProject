@@ -16,6 +16,11 @@ public class VoiceMailInteraction : MonoBehaviour
     //Define variables
     float distance = 0;
     bool activated = false;
+    int messageCount = 0;
+
+    //Define Audio Clips
+    public AudioClip finance;
+    public AudioClip principal;
     
 
     // Update is called once per frame
@@ -27,6 +32,7 @@ public class VoiceMailInteraction : MonoBehaviour
             if (Input.GetKeyDown("e") && !activated) {
                 manager.GetComponent<JournalManager>().journalList.Add(journal.GetComponent<Image>());
                 activated = true;
+                PlayMessage();
                 JournalManager manageScript = manager.GetComponent<JournalManager>();
                 manageScript.ScribbleNotes();
                 StartCoroutine(ShowMessage("Notes added", 2));
@@ -42,5 +48,20 @@ public class VoiceMailInteraction : MonoBehaviour
         textMessage.enabled = true;
         yield return new WaitForSeconds(delay);
         textMessage.enabled = false;
+    }
+
+    void PlayMessage() {
+        if (messageCount == 0) {
+            AudioSource audioPlayer = GetComponent<AudioSource>();
+            audioPlayer.clip = finance;
+            audioPlayer.Play();
+            messageCount = 1;
+        } else if (messageCount == 1) {
+            AudioSource audioPlayer = GetComponent<AudioSource>();
+            audioPlayer.clip = principal;
+            audioPlayer.Play();
+            messageCount = 1;
+        }
+        
     }
 }
