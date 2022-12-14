@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f0529d1f487fdfe40be92ffcb7b472e6
+guid: 33fc17c2d2e18254ebbb505915971e2b
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert3
-    second: {fileID: 2100000, guid: 58ae980867f3b374fbe67ad503ac4970, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: paper
-    second: {fileID: 2100000, guid: 58ae980867f3b374fbe67ad503ac4970, type: 2}
+      name: note
+    second: {fileID: 2100000, guid: e7e94c7f635d0214782cd8b236727011, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
