@@ -42643,7 +42643,7 @@ MonoBehaviour:
   journal2: {fileID: 1814850343}
   manager: {fileID: 995075598}
   finance: {fileID: 8300000, guid: 692f9250c386f42208000294b93f4a96, type: 3}
-  principal: {fileID: 8300000, guid: 13dffb78c48054e44a6c58f42bc45e7d, type: 3}
+  principal: {fileID: 8300000, guid: 57f20cddb15884ec082351bd8d4b2642, type: 3}
 --- !u!82 &9069532638444716569
 AudioSource:
   m_ObjectHideFlags: 0

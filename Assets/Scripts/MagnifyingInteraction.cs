@@ -31,6 +31,7 @@ public class MagnifyingInteraction : MonoBehaviour
                 manageScript.ScribbleNotes();
                 StartCoroutine(ShowMessage("Notes added", 2));
                 JournalManager.daughterFound = true;
+                JournalManager.magnifier = true;
             }
         } else {
             textBox.GetComponent<TextMeshProUGUI>().text = "";
