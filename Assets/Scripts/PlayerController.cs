@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour, ICharacterController
     public KinematicCharacterMotor motor;
     public FirstPersonCamera fpsCamera;
 
+    public bool inputsLocked = false;
+
     [Header("Movement")] 
     public float maxStableMoveSpeed = 5f;
     public float stableMovementSharpness = 15f;
@@ -33,7 +35,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
     private bool _journalDown;
     private bool _timeSwapDown;
     private Vector3 _gravity = new Vector3(0, -30f, 0);
-    
+
 
     private void Awake()
     {
@@ -48,6 +50,7 @@ public class PlayerController : MonoBehaviour, ICharacterController
 
     private void Update()
     {
+        if (inputsLocked) return;
         HandleCharacterInput();
     }
 
