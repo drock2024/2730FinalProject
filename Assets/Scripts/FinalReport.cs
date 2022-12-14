@@ -11,6 +11,7 @@ public class FinalReport : MonoBehaviour
     public TMP_Dropdown culpritBox;
     public TMP_Dropdown causeBox;
     public TMP_Dropdown moneyBox;
+    public GameObject label;
 
     //Flag
     bool tamperIn = false;
@@ -52,8 +53,12 @@ public class FinalReport : MonoBehaviour
         }
     }
 
-    public void FinishGame() {
-        SceneManager.LoadScene("Scenes/MainMenu");
+    public void GiveMoney() {
+        SceneManager.LoadScene("Scenes/MoneyEnd"); 
+    }
+
+    public void NoMoney() {
+        SceneManager.LoadScene("Scenes/NoMoneyEnd");
     }
 
 }
