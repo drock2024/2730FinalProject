@@ -20,4 +20,9 @@ public class MainMenu : MonoBehaviour
     public void SubmitReport() {
         SceneManager.LoadScene("Scenes/FinalReport");
     }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("Scenes/MainMenu");
+    }
 }
