@@ -12,6 +12,9 @@ public class FinalReport : MonoBehaviour
     public TMP_Dropdown causeBox;
     public TMP_Dropdown moneyBox;
 
+    //Flag
+    bool tamperIn = false;
+
     void Start()
     {
         //Unlock the cursor
@@ -21,16 +24,31 @@ public class FinalReport : MonoBehaviour
         if (JournalManager.momFound) {
             List<string> mom = new List<string> {"Hailey Plotwell"};
             culpritBox.AddOptions(mom);
+            if (!tamperIn) {
+                List<string> tamper = new List<string> {"Lighter fluid"};
+                causeBox.AddOptions(tamper);
+                tamperIn = true;
+            }
+
         }
 
         if (JournalManager.daughterFound) {
             List<string> daughter = new List<string> {"Sadie Plotwell"};
             culpritBox.AddOptions(daughter);
+            if (JournalManager.magnifier) {
+                List<string> magnifying = new List<string> {"Magnifying accident"};
+                causeBox.AddOptions(magnifying);
+            }
         }
 
         if (JournalManager.sonFound) {
             List<string> son = new List<string> {"Jason Plotwell"};
             culpritBox.AddOptions(son);
+            if (!tamperIn) {
+                List<string> tamper = new List<string> {"Lighter fluid"};
+                causeBox.AddOptions(tamper);
+                tamperIn = true;
+            }
         }
     }
 

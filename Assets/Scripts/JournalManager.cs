@@ -10,11 +10,16 @@ public class JournalManager : MonoBehaviour
     public List<Image> journalList = new List<Image>();
     GameObject cover;
     public int page = 0;
+    
     //Checks for culprits
     public static bool momFound = false;
     public static bool sonFound = false;
     public static bool daughterFound = false;
     public static bool natureFound = false;
+
+    //Checks for Causes
+    public static bool magnifier = false;
+
     //Audio
     public AudioClip scribble;
     public AudioClip pageTurn;
