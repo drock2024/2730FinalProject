@@ -22,7 +22,7 @@ public class TimeSwitcher : MonoBehaviour
 
     [SerializeField] private VolumeProfile volumeProfile;
 
-    private TimePeriod _timePeriod = TimePeriod.Present;
+    [SerializeField] private TimePeriod _timePeriod = TimePeriod.Present;
     private bool _swapping = false;
     private PlayerController _playerController;
     private AudioSource _audioSource;
