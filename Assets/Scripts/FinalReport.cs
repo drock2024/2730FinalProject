@@ -52,4 +52,8 @@ public class FinalReport : MonoBehaviour
         }
     }
 
+    public void FinishGame() {
+        SceneManager.LoadScene("Scenes/MainMenu");
+    }
+
 }
